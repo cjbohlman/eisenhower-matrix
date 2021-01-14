@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Eisenhower Matrix</title>
+    <script src="./script.js"></script>
   </head>
   <body>
       <!-- Introduction -->
       <section>
+          <h1>Eisenhower Matrix</h1>
           <p>This Eisenhower matrix web application is open source and registration-free. Just open it up and start using!</p>
       </section>
 
@@ -21,10 +23,34 @@
       <!-- Matrix -->
       <section>
           <div class="matrix">
-            <div class="do"></div>
-            <div class="decide"></div>
-            <div class="delegate"></div>
-            <div class="delete"></div>
+            <div class="do">
+              <p><b>DO:</b> Urgent tasks that are important</p>
+              <ul class="do-list">
+              </ul>
+              <input type="text" placeholder="New task">
+              <button class="submit-btn" type="submit">Add Task</button>
+            </div>
+            <div class="decide">
+             <p><b>DECIDE:</b> Non-urgent tasks that are important</p>
+              <ul class="decide-list" data-list="decide">
+              </ul>
+              <input type="text" placeholder="New task">
+              <button class="submit-btn" type="submit" data-list="decide">Add Task</button>
+            </div>
+            <div class="delegate">
+              <p><b>DELEGATE:</b> Urgent tasks that are not important</p>
+              <ul class="delegate-list" data-list="delegate">
+              </ul>
+              <input type="text" placeholder="New task">
+              <button class="submit-btn" type="submit" data-list="delegate">Add Task</button>
+            </div>
+            <div class="delete">
+              <p><b>DELETE:</b> Non-urgent tasks that are not important</p>
+              <ul class="delete-list" data-list="delete">
+              </ul>
+              <input type="text" placeholder="New task">
+              <button class="submit-btn" type="submit" data-list="delete">Add Task</button>
+            </div>
           </div>
       </section>
   </body>
