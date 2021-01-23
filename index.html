@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eisenhower Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
     <script src="./script.js"></script>
   </head>
   <body>
@@ -23,28 +26,28 @@
       <!-- Matrix -->
       <section>
           <div class="matrix">
-            <div class="do">
+            <div class="do square">
               <p><b>DO:</b> Urgent tasks that are important</p>
               <ul class="do-list">
               </ul>
               <input type="text" placeholder="New task">
               <button class="submit-btn" type="submit">Add Task</button>
             </div>
-            <div class="decide">
+            <div class="decide square">
              <p><b>DECIDE:</b> Non-urgent tasks that are important</p>
               <ul class="decide-list" data-list="decide">
               </ul>
               <input type="text" placeholder="New task">
               <button class="submit-btn" type="submit" data-list="decide">Add Task</button>
             </div>
-            <div class="delegate">
+            <div class="delegate square">
               <p><b>DELEGATE:</b> Urgent tasks that are not important</p>
               <ul class="delegate-list" data-list="delegate">
               </ul>
               <input type="text" placeholder="New task">
               <button class="submit-btn" type="submit" data-list="delegate">Add Task</button>
             </div>
-            <div class="delete">
+            <div class="delete square">
               <p><b>DELETE:</b> Non-urgent tasks that are not important</p>
               <ul class="delete-list" data-list="delete">
               </ul>
