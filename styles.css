@@ -27,31 +27,16 @@ body {
     padding: 5px;
 }
 .square p {
-    flex: 1 1 10%;
-    order: 1;
     margin-top: 0%;
     margin-bottom: 0;
 }
 
 .square ul {
-    flex: 1 1 70%;
-    order: 2;
+    flex: 1 2;
 }
 
-
-.square input {
-    /* flex item */
-    flex: 1 1 10%;
-    order: 3;
-    min-height: 40px;
-}
-
-.square button {
-    /* flex item */
-    flex: 1 1 10%;
-    order: 4;
-    min-height: 40px;
-    align-self: strech;
+.form input {
+    width: 90%;
 }
 
 .item-done {
