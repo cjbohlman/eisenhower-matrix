@@ -4,6 +4,7 @@
  - [ ] Make buttons align to right of list item
  - [ ] Add borders
  - [ ] Add nice color scheme
+ - [ ] Add urgent/important axes text
  - [ ] Fix square headings
  - [ ] Fix input to look nicer
  - [ ] support multi-line tasks
