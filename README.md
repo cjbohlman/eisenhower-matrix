@@ -5,7 +5,8 @@
  - [x] Make buttons align to right of list item
  - [ ] Add borders
  - [ ] Add nice color scheme
- - [x] Fix square headings
+ - [x] Add urgent/important axes text
+ - [ ] Fix square headings
  - [ ] Fix input to look nicer
  - [x] support multi-line tasks
  - [x] Add character limit to input
