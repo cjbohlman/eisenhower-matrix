@@ -8,12 +8,13 @@ function addTask(e) {
     e.preventDefault()
     const quadrantDiv = e.target.parentNode.parentNode
     const input = quadrantDiv.querySelector('input')
-    if (input.value === '' ) {
+    if (input.value === ''  || input.value.length > 255) {
         return;
     }
+    
     const li = document.createElement('li')
     const div = document.createElement('div')
-    div.style.display='inline'
+    // div.style.display='inline'
 
     const p = document.createElement('p')
     p.textContent = input.value
@@ -36,6 +37,7 @@ function addTask(e) {
     div.appendChild(p)
     div.appendChild(btnCheck)
     div.appendChild(btnDelete)
+    div.classList.add('item')
     li.appendChild(div)
 
     input.value = ''

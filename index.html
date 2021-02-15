@@ -25,13 +25,27 @@
 
       <!-- Matrix -->
       <section>
+          <div class="urg-heading">
+            <p class="heading urg-head">URGENT</p>
+            <p class="heading urg-head">NON-URGENT</p>
+          </div>
+          <p class="heading imp">I<br>
+            M<br>
+            P<br>
+            O<br>
+            R<br>
+            T<br>
+            A<br>
+            N<br>
+            T<br>
+          </p>
           <div class="matrix">
             <div class="do square">
               <p><b>DO:</b> Urgent tasks that are important</p>
               <ul class="do-list">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task">
+                <input type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="do">+</button>
               </div>
             </div>
@@ -40,16 +54,31 @@
               <ul class="decide-list" data-list="decide">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task">
+                <input type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="decide">+</button>
               </div>
             </div>
+            <p class="heading nonimp">
+              N<br>
+              O<br>
+              N<br>
+              -<br>
+              I<br>
+              M<br>
+              P<br>
+              O<br>
+              R<br>
+              T<br>
+              A<br>
+              N<br>
+              T<br>
+            </p>
             <div class="delegate square">
               <p><b>DELEGATE:</b> Urgent tasks that are not important</p>
               <ul class="delegate-list" data-list="delegate">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task">
+                <input type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="delegate">+</button>
               </div>
             </div>
@@ -58,7 +87,7 @@
               <ul class="delete-list" data-list="delete">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task">
+                <input type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="delete">+</button>
               </div>
             </div>

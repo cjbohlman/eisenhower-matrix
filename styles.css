@@ -3,7 +3,7 @@
   }
 
 body {
-    background: linear-gradient(180deg, rgba(21,50,67,1) 17%, rgba(180,184,171,1) 60%, rgba(244,249,233,1) 100%) rgba(244,249,233,1) fixed no-repeat; 
+    /* background: linear-gradient(180deg, rgba(21,50,67,1) 17%, rgba(180,184,171,1) 60%, rgba(244,249,233,1) 100%) rgba(244,249,233,1) fixed no-repeat;  */
     min-height: 100%;
     font-family: 'Fira Sans';
 }
@@ -24,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5px;
+    padding: 10px;
 }
 .square p {
     margin-top: 0%;
@@ -39,9 +39,65 @@ body {
     width: 90%;
 }
 
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item p {
+    flex-grow: 5;
+    word-break: break-all;
+}
+
+.heading {
+    display: none;
+    opacity: 25%;
+}
+
+.urg-heading {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .item-done {
     text-decoration:line-through;
 }
+
+input[type=text]{
+    -webkit-border-radius: 20px;
+     border-radius: 20px;
+     padding-left: 10px;
+     padding-right: 10px;
+     height: 30px;
+     background-color: lightgrey;
+     color: grey;
+    }
+    
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid black;
+}
+
+.submit-btn {
+    font-size: 24px;
+    border: 0px;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  4px 4px 7px #cecece,
+                 -4px -4px 7px #f2f2f2;
+    
+}
+
+/* .submit-btn:hover {
+    background-color: lightgray
+}
+
+.submit-btn:active {
+  background-color: darkgrey;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
 /* for the computer */
 @media only screen and (min-width: 768px) {
     .square {
@@ -54,5 +110,25 @@ body {
         align-self: center;
     }
 
+    .heading {
+        display: inline;
+    }
+
+    .urg-head {
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    .imp {
+        position: absolute;
+        z-index: -1;
+        top: 335px;
+    }
+
+    .nonimp {
+        position: absolute;
+        z-index: -1;
+        top: 700px;
+    }
 
 }
