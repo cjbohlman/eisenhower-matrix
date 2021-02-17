@@ -3,7 +3,6 @@
   }
 
 body {
-    /* background: linear-gradient(180deg, rgba(21,50,67,1) 17%, rgba(180,184,171,1) 60%, rgba(244,249,233,1) 100%) rgba(244,249,233,1) fixed no-repeat;  */
     min-height: 100%;
     font-family: 'Fira Sans';
 }
@@ -16,6 +15,10 @@ body {
 
 /* for mobile devices */
 .square {
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 1.5%;
+
     /* flex item */
     flex: 1 1 90%;
     min-height: 400px;
@@ -64,46 +67,57 @@ body {
 }
 
 input[type=text]{
-    -webkit-border-radius: 20px;
-     border-radius: 20px;
-     padding-left: 10px;
-     padding-right: 10px;
-     height: 30px;
-     background-color: lightgrey;
-     color: grey;
+    width: 100%;
+    border: 3px solid black;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: grey;
     }
     
 input[type=text]:focus {
      outline: none;
-     border: 1px solid black;
+     color: black;
+}
+
+.form {
+    display: flex;
+    width: 100%;
 }
 
 .submit-btn {
-    font-size: 24px;
-    border: 0px;
-    border-radius: 9px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  4px 4px 7px #cecece,
-                 -4px -4px 7px #f2f2f2;
-    
+    width: 40px;
+    height: 36px;
+    border: 1px solid black;
+    background: black;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-/* .submit-btn:hover {
-    background-color: lightgray
+.d-heading {
+    font-size: 20px;
+    color: black;
 }
 
-.submit-btn:active {
-  background-color: darkgrey;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-} */
+.d-subheading {
+    font-size: 18px;
+    color: gray;
+}
 
 /* for the computer */
 @media only screen and (min-width: 768px) {
     .square {
         /* flex item */
-        flex: 1 1 50%;
+        flex: 1 1 40%;
         min-height: 400px;
+        padding-left: 15px;
+        margin-left: 20px;
+        margin-bottom: 20px;
     }
 
     .square button {
@@ -129,6 +143,16 @@ input[type=text]:focus {
         position: absolute;
         z-index: -1;
         top: 700px;
+    }
+
+    .d-heading {
+        font-size: 30px;
+        color: black;
+    }
+    
+    .d-subheading {
+        font-size: 18px;
+        color: gray;
     }
 
 }
