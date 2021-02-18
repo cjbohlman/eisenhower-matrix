@@ -109,13 +109,26 @@ input[type=text]:focus {
     color: gray;
 }
 
+.info-btn {
+    font-size: 18px;
+    margin-top: 5px;
+    background-color: white;
+    border: none;
+}
+
+.del-btn, .chk-btn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
 /* for the computer */
 @media only screen and (min-width: 768px) {
     .square {
         /* flex item */
         flex: 1 1 40%;
         min-height: 400px;
-        padding-left: 15px;
         margin-left: 20px;
         margin-bottom: 20px;
     }
@@ -156,3 +169,28 @@ input[type=text]:focus {
     }
 
 }
+
+@keyframes removeInfo{
+    0%{
+      opacity: 1;
+      /* transform:translateY(); */
+    }
+    50%{
+      opacity: 0.5;
+      /* transform: rotateX(0deg); */
+    }
+    100%{
+      display: none;
+      opacity: 0;
+      position: relative;
+      right: -1000px;
+      height: 0px;
+      /* transform: rotateX(90deg); */
+    }
+  }
+  
+  .disappear{
+      animation-name: removeInfo;
+      animation-duration: 500ms;
+      animation-fill-mode: forwards;
+  }
