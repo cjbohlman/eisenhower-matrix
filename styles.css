@@ -13,9 +13,11 @@ body {
     flex-wrap: wrap;
 }
 
+
+
 /* for mobile devices */
 .square {
-    border: 1px solid black;
+    border: 5px solid;
     border-radius: 3px;
     margin-bottom: 1.5%;
 
@@ -29,6 +31,23 @@ body {
     justify-content: space-between;
     padding: 10px;
 }
+
+.do {
+    border-color: #3aaed8;
+}
+
+.decide {
+    border-color: #595a4a;
+}
+
+.delegate {
+    border-color: #52aa8a;
+}
+
+.delete {
+    border-color: #160f29;
+}
+
 .square p {
     margin-top: 0%;
     margin-bottom: 0;
@@ -99,6 +118,41 @@ input[type=text]:focus {
     font-size: 20px;
 }
 
+.do input {
+    border-color: #3aaed8;
+}
+
+.decide input {
+    border-color: #595a4a;
+}
+
+.delegate input {
+    border-color: #52aa8a;
+}
+
+.delete input{
+    border-color: #160f29;
+}
+
+.do .submit-btn {
+    border-color: #3aaed8;
+    background: #3aaed8;
+}
+
+.decide .submit-btn {
+    border-color: #595a4a;
+    background: #595a4a;
+}
+
+.delegate .submit-btn {
+    border-color: #52aa8a;
+    background: #52aa8a;
+}
+
+.delete .submit-btn {
+    border-color: #160f29;
+    background: #160f29;
+}
 .d-heading {
     font-size: 20px;
     color: black;
@@ -149,13 +203,15 @@ input[type=text]:focus {
     .imp {
         position: absolute;
         z-index: -1;
-        top: 335px;
+        top: 315px;
+        text-align: center;
     }
 
     .nonimp {
         position: absolute;
         z-index: -1;
-        top: 700px;
+        top: 695px;
+        text-align: center;
     }
 
     .d-heading {
@@ -183,7 +239,7 @@ input[type=text]:focus {
       display: none;
       opacity: 0;
       position: relative;
-      right: -1000px;
+      right: -10000px;
       height: 0px;
       /* transform: rotateX(90deg); */
     }
