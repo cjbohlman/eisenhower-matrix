@@ -4,7 +4,7 @@
 ### First Sprint
  - [x] Make buttons align to right of list item
  - [x] Add borders
- - [ ] Add nice color scheme
+ - [x] Add nice color scheme
  - [x] Add urgent/important axes text
  - [x] Fix square headings
  - [x] Fix input to look nicer
@@ -13,5 +13,5 @@
  
  ### Second Sprint
  - [ ] Add task sub-notes
- - [ ] Add local/session storage support
+ - [x] Add local/session storage support
  - [ ] Offer data import + export
