@@ -1,12 +1,90 @@
 
+
 document.addEventListener('DOMContentLoaded', (event) => {
+    var modal = document.getElementById('myModal')
+
     loadLocalStorage()
+
     const submitBtns = document.querySelectorAll('.submit-btn')
     submitBtns.forEach(btn => btn.addEventListener('click', addTaskFromInput))
     
     const hideInfoButton = document.querySelector('.info-btn')
     hideInfoButton.addEventListener('click' , toggleInfo)
+
+    const settingsButton = document.querySelector('.settings-btn')
+    settingsButton.addEventListener('click', () => openSettings(modal))
+
+    const closeButton = document.querySelector('.close')
+    closeButton.addEventListener('click', () => closeSettings(modal))
+
+    const importBtn = document.querySelector('.import')
+    importBtn.addEventListener('click', importData)
+
+    const exportBtn = document.querySelector('.export')
+    exportBtn.addEventListener('click', () => exportData(modal))
+
+    const importInput = document.getElementById('fileid')
+    importInput.addEventListener('change', () => populateImportData())
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    } 
 });
+
+function openSettings(modal) {
+    modal.style.display = "block";
+}
+
+function closeSettings(modal) {
+    modal.style.display = "none"
+}
+
+function importData() {
+    document.getElementById('fileid').click();
+}
+
+function exportData(modal) {
+    const file = new Blob(
+        [JSON.stringify(
+            {"do":window.localStorage.getItem('do'),
+            "decide":window.localStorage.getItem('decide'),
+            "delegate":window.localStorage.getItem('delegate'),
+            "delete":window.localStorage.getItem('delete')}
+        ),], 
+        { type: 'application/json' }
+      );
+      const fileURL = URL.createObjectURL(file);
+          // create the link 
+    const linkElement = document.createElement("a");
+
+    // add the file url
+    linkElement.setAttribute('href', fileURL);
+
+    // add the download attribute with name suggestion
+    linkElement.setAttribute('download', 'eisenhower-matrix.json')
+
+    // add it to the DOM
+    modal.appendChild(linkElement);
+    linkElement.click()
+}
+
+function populateImportData() {
+    document.getElementById('fileid').files[0].text().then(text => {
+        const items = JSON.parse(text) 
+        const squares = ["do", "decide", "delegate", "delete"]
+        squares.forEach(element => {
+            const tasksArr = JSON.parse(items[element])
+            const square = document.querySelector('.'+element)
+            tasksArr.forEach(newTask => {
+                addTask(square, newTask, true)
+            })
+        })
+    });
+
+}
 
 function loadLocalStorage() {
     const squares = ['do', 'decide', 'delegate', 'delete']
@@ -19,6 +97,7 @@ function loadLocalStorage() {
             })       
         }
     })
+
 }
 
 function toggleInfo(e) {

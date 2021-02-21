@@ -9,11 +9,29 @@
     <script src="./script.js"></script>
   </head>
   <body>
+      
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <button class="import">Import Data</button>
+          <input id='fileid' type='file' accept=".json" hidden/>
+          <br>
+          <br>
+          <button class="export">Export Data</button>
+        </div>
+
+      </div>
+
       <!-- Introduction -->
       <section>
           <span>
             <h1 style="display: inline;">Eisenhower Matrix</h1>
             <button style="float: right;" class="info-btn">&#709;</button>
+            <button style="float: right;" class="settings-btn">&#9881;</button>
+
           </span>
           <p>This Eisenhower matrix web application is open source and registration-free. Just open it up and start using!</p>
           
@@ -21,9 +39,9 @@
 
       <!-- Explanation -->
       <section class="info">
-          <p>Eisenhower matrices (also know as Urgent-Important matrices) are productivity tools. They divide tasks into sections so you can focus on the necessary and cut out the filler.
+          <p>Eisenhower matrices (also know as Urgent-Important matrices) are productivity tools. They divide tasks into sections so you can focus on what's necessary and cut out the filler.
           </p>
-          <p>For more information, read about them <a href="https://www.developgoodhabits.com/eisenhower-matrix/">here.</a>
+          <p>For more information, read about them <a href="https://www.developgoodhabits.com/eisenhower-matrix/">here</a>.
           </p>
       </section>
 
