@@ -12,9 +12,12 @@
  - [x] Add character limit to input
  
  ### Second Sprint
- - [ ] Add task sub-notes
+ 
  - [x] Add local/session storage support
  - [x] Offer data import + export
  - [ ] Fix color aesthetic
- - [ ] Make position of important/non-important headings dependent on width of squares. If square grows past it's original size, the headings need to match
- - [ ] Fix modal window button positions and make more visually appealing
+ - [x] Make position of important/non-important headings dependent on width of squares. If square grows past it's original size, the headings need to match
+ - [x] Fix modal window button positions and make more visually appealing
+
+ ### Third Sprint
+- [ ] Expand tasks -> adding sub-notes
