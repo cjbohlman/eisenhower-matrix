@@ -1,6 +1,8 @@
 # eisenhower-matrix
 ## Open source Eisenhower matrix web app that does not need an account to register
 
+### Made from HTML, CSS, and vanilla JS
+
 ### First Sprint
  - [x] Make buttons align to right of list item
  - [x] Add borders
