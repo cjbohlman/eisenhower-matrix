@@ -31,25 +31,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const delegateSquare = document.querySelector('.delegate')
     const deleteSquare = document.querySelector('.delete')
 
-    doSquare.addEventListener('change', () => {
-        fixImportantHeaderPosition(doSquare)
-        fixNonImportantHeaderPosition(delegateSquare)
-    })
-    decideSquare.addEventListener('change', () => {
-        fixImportantHeaderPosition(doSquare)
-        fixNonImportantHeaderPosition(delegateSquare)
-    })
-    delegateSquare.addEventListener('change', () => {
-        fixImportantHeaderPosition(doSquare)
-        fixNonImportantHeaderPosition(delegateSquare)
-    })
-    deleteSquare.addEventListener('change', () => {
-        fixImportantHeaderPosition(doSquare)
-        fixNonImportantHeaderPosition(delegateSquare)
-    })
+    // doSquare.addEventListener('change', () => {
+    //     fixImportantHeaderPosition(doSquare)
+    //     fixNonImportantHeaderPosition(delegateSquare)
+    // })
+    // decideSquare.addEventListener('change', () => {
+    //     fixImportantHeaderPosition(doSquare)
+    //     fixNonImportantHeaderPosition(delegateSquare)
+    // })
+    // delegateSquare.addEventListener('change', () => {
+    //     fixImportantHeaderPosition(doSquare)
+    //     fixNonImportantHeaderPosition(delegateSquare)
+    // })
+    // deleteSquare.addEventListener('change', () => {
+    //     fixImportantHeaderPosition(doSquare)
+    //     fixNonImportantHeaderPosition(delegateSquare)
+    // })
 
-    fixImportantHeaderPosition(doSquare)
-    fixNonImportantHeaderPosition(delegateSquare)
+    // fixImportantHeaderPosition(doSquare)
+    // fixNonImportantHeaderPosition(delegateSquare)
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
@@ -59,23 +59,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
     } 
 });
 
-function fixImportantHeaderPosition(square) {
-    const importantHeader = document.querySelector('.imp')
-    // top of header should be equal to midpoint of do box + half the height
-    const halfImpHeight = importantHeader.getBoundingClientRect().height/2
-    const top = square.getBoundingClientRect().top + window.scrollY
-    const bottom = square.getBoundingClientRect().bottom + window.scrollY
-    importantHeader.style.top = (top + (bottom - top)/2 - halfImpHeight) + "px"
-}
+// function fixImportantHeaderPosition(square) {
+//     const importantHeader = document.querySelector('.imp')
+//     // top of header should be equal to midpoint of do box + half the height
+//     const halfImpHeight = importantHeader.getBoundingClientRect().height/2
+//     const top = square.getBoundingClientRect().top + window.scrollY
+//     const bottom = square.getBoundingClientRect().bottom + window.scrollY
+//     importantHeader.style.top = (top + (bottom - top)/2 - halfImpHeight) + "px"
+// }
 
-function fixNonImportantHeaderPosition(square) {
-    const nonImportantHeader = document.querySelector('.nonimp')
-    // top of header should be equal to midpoint of do box + half the height
-    const halfImpHeight = nonImportantHeader.getBoundingClientRect().height/2
-    const top = square.getBoundingClientRect().top + window.scrollY
-    const bottom = square.getBoundingClientRect().bottom + window.scrollY
-    nonImportantHeader.style.top = (top + (bottom - top)/2 - halfImpHeight) + "px"
-}
+// function fixNonImportantHeaderPosition(square) {
+//     const nonImportantHeader = document.querySelector('.nonimp')
+//     // top of header should be equal to midpoint of do box + half the height
+//     const halfImpHeight = nonImportantHeader.getBoundingClientRect().height/2
+//     const top = square.getBoundingClientRect().top + window.scrollY
+//     const bottom = square.getBoundingClientRect().bottom + window.scrollY
+//     nonImportantHeader.style.top = (top + (bottom - top)/2 - halfImpHeight) + "px"
+// }
 
 function openSettings(modal) {
     modal.style.display = "block";

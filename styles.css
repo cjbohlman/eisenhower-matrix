@@ -1,3 +1,5 @@
+/* body  */
+
 * {
     box-sizing: border-box;
   }
@@ -8,19 +10,22 @@ body {
 }
 
 .matrix {
-    /* flex container */
-    display: flex;
-    flex-wrap: wrap;
+    /* grid */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    justify-items: strech;
+    align-items: stretch;
+    
 }
 
-/* for mobile devices */
+/* squares */
+
 .square {
     border: 5px solid;
     border-radius: 3px;
-    margin-bottom: 1.5%;
 
-    /* flex item */
-    flex: 1 1 90%;
     min-height: 400px;
     
     /* flex container */
@@ -44,6 +49,20 @@ body {
 
 .delete {
     border-color: #160f29;
+}
+
+/* elements */
+
+/* headings */
+
+.urg {
+    grid-column-start: 2;
+}
+
+.urg, .nonurg, .imp, .nonimp {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
 }
 
 .square p {
@@ -72,11 +91,6 @@ body {
 .heading {
     display: none;
     opacity: 25%;
-}
-
-.urg-heading {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .item-done {
@@ -229,12 +243,8 @@ input[type=text]:focus {
 
 /* for the computer */
 @media only screen and (min-width: 768px) {
-    .square {
-        /* flex item */
-        flex: 1 1 40%;
-        min-height: 400px;
-        margin-left: 20px;
-        margin-bottom: 20px;
+    .matrix {
+        grid-template-columns: 20px 1fr 1fr;
     }
 
     .square button {
@@ -247,20 +257,6 @@ input[type=text]:focus {
 
     .urg-head {
         flex-basis: 50%;
-        text-align: center;
-    }
-
-    .imp {
-        position: absolute;
-        z-index: -1;
-        top: 315px;
-        text-align: center;
-    }
-
-    .nonimp {
-        position: absolute;
-        z-index: -1;
-        top: 695px;
         text-align: center;
     }
 
@@ -279,19 +275,18 @@ input[type=text]:focus {
 @keyframes removeInfo{
     0%{
       opacity: 1;
-      /* transform:translateY(); */
     }
+
     50%{
       opacity: 0.5;
-      /* transform: rotateX(0deg); */
     }
+
     100%{
       display: none;
       opacity: 0;
       position: relative;
       right: -10000px;
       height: 0px;
-      /* transform: rotateX(90deg); */
     }
   }
   
