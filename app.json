@@ -1,0 +1,16 @@
+{
+  "name": "Smogon Scraper",
+  "description": "A barebones Smogon Scraper.",
+  "image": "heroku/python",
+  "repository": "https://github.com/heroku/python-getting-started",
+  "keywords": ["python", "flasl" ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+   
+  }
+}
