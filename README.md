@@ -1,6 +1,8 @@
 # eisenhower-matrix
 ## Open source Eisenhower matrix web app that does not need an account to register
 
+[Deployed on Heroku](https://eisenhower-matrix-app.herokuapp.com)
+
 ### Made from HTML, CSS, and vanilla JS
 
 ### First Sprint
