@@ -29,4 +29,5 @@
  ### Bug fixes
  - [ ] CSS Linter
  - [x] Fix dark mode button colors for settings, chk/delete
- - [ ] Make inputs dark grey in dark mode
+ - [x] Make inputs dark grey in dark mode
+ - [x] Make browser remember dark mode

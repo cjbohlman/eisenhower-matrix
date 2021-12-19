@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const darkThemeSlider = document.getElementById('dark-slider')
     darkThemeSlider.addEventListener('click', () => {
         if (document.body.classList.contains("dark-theme")) {
-            console.log("Dark mode off!")
             document.body.classList.remove("dark-theme");
+            window.localStorage.setItem("stg_darkmode", false);
         } else {
-            console.log("Dark mode on!")
             document.body.classList.add("dark-theme");
+            window.localStorage.setItem("stg_darkmode", true);
         }
 
     })
@@ -145,6 +145,10 @@ function populateImportData() {
 }
 
 function loadLocalStorage() {
+    if (localStorage.getItem("stg_darkmode") == "true") {
+        document.body.classList.add("dark-theme");
+    }
+
     const squares = ['do', 'decide', 'delegate', 'delete']
     squares.forEach(item => {
         if (localStorage.getItem(item)) {
