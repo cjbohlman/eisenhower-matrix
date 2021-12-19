@@ -219,7 +219,7 @@ function addTask(square, task, fromInput = false ) {
     }
 
     const btnCheck = document.createElement('span')
-    btnCheck.innerHTML = '<button class="chk-btn" id="check">✓</button>'
+    btnCheck.innerHTML = '<button class="chk-btn" id="check">&#10003;</button>'
     btnCheck.addEventListener('click', (e) => {
         const newTask = e.target.parentNode.parentNode.parentNode.querySelector('p').textContent
         if (!e.target.parentNode.parentNode.parentNode.querySelector('p').classList.contains('item-done')) {

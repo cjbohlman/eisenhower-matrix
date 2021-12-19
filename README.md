@@ -28,6 +28,5 @@
 
  ### Bug fixes
  - [ ] CSS Linter
- - [ ] Fix dark mode button colors for settings, chk/delete
+ - [x] Fix dark mode button colors for settings, chk/delete
  - [ ] Make inputs dark grey in dark mode
- - [ ] add focus outlines to settings, chk/del, and setting buttons
