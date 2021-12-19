@@ -7,9 +7,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const submitBtns = document.querySelectorAll('.submit-btn')
     submitBtns.forEach(btn => btn.addEventListener('click', addTaskFromInput))
-    
-    const hideInfoButton = document.querySelector('.info-btn')
-    hideInfoButton.addEventListener('click' , toggleInfo)
+
+    const taskInputs = document.querySelectorAll('.task-input')
+    taskInputs.forEach(input => input.addEventListener('keypress', (e) => {
+        if (e.keyCode == 13) 
+            addTaskFromInput(e)
+    }))
 
     const settingsButton = document.querySelector('.settings-btn')
     settingsButton.addEventListener('click', () => openSettings(modal))
@@ -25,6 +28,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const importInput = document.getElementById('fileid')
     importInput.addEventListener('change', () => populateImportData())
+
+    const darkThemeSlider = document.getElementById('dark-slider')
+    darkThemeSlider.addEventListener('click', () => {
+        if (document.body.classList.contains("dark-theme")) {
+            console.log("Dark mode off!")
+            document.body.classList.remove("dark-theme");
+        } else {
+            console.log("Dark mode on!")
+            document.body.classList.add("dark-theme");
+        }
+
+    })
 
     const doSquare = document.querySelector('.do')
     const decideSquare = document.querySelector('.decide')
@@ -168,6 +183,8 @@ function addTaskFromInput(e) {
     addTask(square, square.querySelector('input').value, true)
     square.querySelector('input').value = ''
 }
+
+
 
 function addTask(square, task, fromInput = false ) {
     const item = square.dataset.list

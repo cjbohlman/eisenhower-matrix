@@ -36,19 +36,19 @@ body {
 }
 
 .do {
-    border-color: #3aaed8;
+    border-color: #38686A;
 }
 
 .decide {
-    border-color: #595a4a;
+    border-color: #DF2935;
 }
 
 .delegate {
-    border-color: #52aa8a;
+    border-color: #7BB2D9;
 }
 
 .delete {
-    border-color: #160f29;
+    border-color: #A7D49B;
 }
 
 /* elements */
@@ -131,39 +131,39 @@ input[type=text]:focus {
 }
 
 .do input {
-    border-color: #3aaed8;
+    border-color: #38686A;
 }
 
 .decide input {
-    border-color: #595a4a;
+    border-color: #DF2935;
 }
 
 .delegate input {
-    border-color: #52aa8a;
+    border-color: #7BB2D9;
 }
 
 .delete input{
-    border-color: #160f29;
+    border-color: #A7D49B;
 }
 
 .do .submit-btn {
-    border-color: #3aaed8;
-    background: #3aaed8;
+    border-color: #38686A;
+    background: #38686A;
 }
 
 .decide .submit-btn {
-    border-color: #595a4a;
-    background: #595a4a;
+    border-color: #DF2935;
+    background: #DF2935;
 }
 
 .delegate .submit-btn {
-    border-color: #52aa8a;
-    background: #52aa8a;
+    border-color: #7BB2D9;
+    background: #7BB2D9;
 }
 
 .delete .submit-btn {
-    border-color: #160f29;
-    background: #160f29;
+    border-color: #A7D49B;
+    background: #A7D49B;
 }
 .d-heading {
     font-size: 20px;
@@ -180,6 +180,7 @@ input[type=text]:focus {
     margin-top: 5px;
     margin-left: 5px;
     background-color: white;
+    color: black;
     border: none;
     padding: 8px 8px 8px 8px;
     text-align: center;
@@ -230,15 +231,15 @@ input[type=text]:focus {
     cursor: pointer;
   } 
 
-  .import, .export {
+  .setting-btn {
       margin-top: 8px;
       margin-right: 8px;
-    border: 1px solid black;
-    text-align: center;
-    color: black;
-    cursor: pointer;
-    font-size: 18px;
-    background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+        font-size: 18px;
+        background-color: white;
   }
 
 /* for the computer */
@@ -295,3 +296,59 @@ input[type=text]:focus {
       animation-duration: 500ms;
       animation-fill-mode: forwards;
   }
+
+  /*dark theme*/
+
+  body.dark-theme {
+  background: #121212;
+}
+body.dark-theme h1,
+body.dark-theme p {
+  color: #eee;
+}
+body.dark-theme a {
+  color: #809fff;
+}
+
+body.dark-theme .modal-content {
+    background-color: #000000;
+  }
+
+  body.dark-theme  .setting-btn {
+        border-color: white;
+        color: white;
+        background-color: black;
+  }
+
+ body.dark-theme   .close:hover,
+  .close:focus {
+    color: white;
+  } 
+
+body.dark-theme .settings-btn {
+    background-color: black;
+    color: white;
+}
+
+body.dark-theme .d-heading {
+        color: white;
+}
+
+body.dark-theme .chk-btn {
+    color: white;
+    background-color: black;
+}
+
+body.dark-theme .del-btn {
+    color: white;
+    background-color: black;
+}
+
+body.dark-theme .task-input {
+    background-color: grey;
+    color: lightgray;
+}
+
+body.dark-theme .task-input:focus {
+    color: white;
+}

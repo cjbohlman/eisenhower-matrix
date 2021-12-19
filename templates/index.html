@@ -16,9 +16,12 @@
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close">&times;</span>
-          <button class="import">Import Data</button>
+          <button class="import setting-btn">Import Data</button>
           <input id='fileid' type='file' accept=".json" hidden/>
-          <button class="export">Export Data</button>
+          <button class="export setting-btn">Export Data</button>
+          <div>
+             <button id="dark-slider" class="setting-btn">Dark Mode Toggle</button>
+          </div>
         </div>
 
       </div>
@@ -63,7 +66,7 @@
               <ul class="do-list">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task" maxlength="255">
+                <input class="task-input" type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="do">+</button>
               </div>
             </div>
@@ -72,7 +75,7 @@
               <ul class="decide-list" data-list="decide">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task" maxlength="255">
+                <input class="task-input" type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="decide">+</button>
               </div>
             </div>
@@ -97,7 +100,7 @@
               <ul class="delegate-list" data-list="delegate">
               </ul>
               <div class="form">
-                <input type="text" placeholder="New task" maxlength="255">
+                <input class="task-input" type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="delegate">+</button>
               </div>
             </div>
@@ -106,7 +109,7 @@
               <ul class="delete-list" data-list="delete">
               </ul>
               <div class="form" >
-                <input type="text" placeholder="New task" maxlength="255">
+                <input class="task-input" type="text" placeholder="New task" maxlength="255">
                 <button class="submit-btn" type="submit" data-list="delete">+</button>
               </div>
             </div>
