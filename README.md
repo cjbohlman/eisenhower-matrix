@@ -19,9 +19,15 @@
  
  - [x] Add local/session storage support
  - [x] Offer data import + export
- - [ ] Fix color aesthetic
+ - [x] Fix color aesthetic
  - [x] Make position of important/non-important headings dependent on width of squares. If square grows past it's original size, the headings need to match
  - [x] Fix modal window button positions and make more visually appealing
 
  ### Third Sprint
-- [ ] Expand tasks -> adding sub-notes
+ - [ ] Expand tasks -> adding sub-notes
+
+ ### Bug fixes
+ - [ ] CSS Linter
+ - [ ] Fix dark mode button colors for settings, chk/delete
+ - [ ] Make inputs dark grey in dark mode
+ - [ ] add focus outlines to settings, chk/del, and setting buttons
